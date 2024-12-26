@@ -53,4 +53,17 @@ This project is a simple **phone book** and **messaging system** written in the 
   ```motoko
   getPhone("Alice"); // Returns: {desc = "Friend"; phone = "12345"}
 
+### Messaging Methods
+
+- `sendMessage(senderPhone: Phone, message: Message): async ()`
+  - Stores a message in the message history.
+  - Example:
+  ```motoko
+  sendMessage("12345", {receiver = "Bob"; mess = "Hi!"});
+
+- `getMessages(senderPhone: Phone): async ?Message`
+  - Retrieves the last message sent by the sender.
+  - Example:
+  ```motoko
+  getMessages("12345"); // Returns: {receiver = "Bob"; mess = "Hi!"}
 
