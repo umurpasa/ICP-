@@ -42,9 +42,15 @@ This project is a simple **phone book** and **messaging system** written in the 
 ### Phone Book Methods
 
 - `insert(name: Name, entry: Entry): async ()`
-  -Adds a new entry to the phone book.
-
-**Example**:
+  - Adds a new entry to the phone book.
+  - Example:
 ```motoko
 insert("Alice", {desc = "Friend"; phone = "12345"});
+
+- `getPhone(name: Name): async ?Entry`
+  - Retrieves an entry by name.
+  - Example:
+```motoko
+getPhone("Alice"); // Returns: {desc = "Friend"; phone = "12345"}
+
 
