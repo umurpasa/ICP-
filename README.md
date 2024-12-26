@@ -29,3 +29,29 @@ This project is a simple **phone book** and **messaging system** written in the 
    ```bash
    git clone https://github.com/your-username/motoko-phonebook.git
    cd motoko-phonebook
+
+2. Deploy the actor on the Internet Computer:
+   ```bash
+   dfx start --background
+   dfx deploy
+
+3. Interact with the deployed actor using the Motoko REPL or HTTP API.
+
+## Actor API
+
+### Phone Book Methods
+
+#### `insert(name: Name, entry: Entry): async ()`
+
+Adds a new entry to the phone book.
+
+**Parameters**:
+- `name` (*Name*): The name of the contact.
+- `entry` (*Entry*): The contact details, including:
+  - `desc` (*Text*): Description of the contact.
+  - `phone` (*Phone*): The phone number of the contact.
+
+**Example**:
+```motoko
+insert("Alice", {desc = "Friend"; phone = "12345"});
+
