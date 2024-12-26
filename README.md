@@ -41,15 +41,8 @@ This project is a simple **phone book** and **messaging system** written in the 
 
 ### Phone Book Methods
 
-#### `insert(name: Name, entry: Entry): async ()`
-
-Adds a new entry to the phone book.
-
-**Parameters**:
-- `name` (*Name*): The name of the contact.
-- `entry` (*Entry*): The contact details, including:
-  - `desc` (*Text*): Description of the contact.
-  - `phone` (*Phone*): The phone number of the contact.
+- `insert(name: Name, entry: Entry): async ()`
+  -Adds a new entry to the phone book.
 
 **Example**:
 ```motoko
